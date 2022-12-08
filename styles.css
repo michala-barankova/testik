@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Garamond;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-size: 24px;
+    line-height: 1.6;
+    background-color: #ecf0f1;
+    color: rgb(255, 255, 255);
+    font-family: Garamond;
+}
+
+header {
+    background-color: #c0bfbf;
+    padding: 5px 0;
+}
+
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    color:rgb(0, 0, 0);
+    font-weight: 200;
+    font-family: Garamond;
+    margin-left: -150px;
+}
+
+.menu > li, .menu > a {
+    display: inline-block;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 1px 20px;
+    margin: 8px;
+    transition: background-color .22s ease, color .22s ease;
+}
+
+.menu a:hover {
+    /*background-color: rgb(221, 208, 208);*/
+    color:rgb(0, 0, 0);
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.submenu {
+    position: absolute;
+    background-color: #c0bfbf;
+    width: 170px;
+    left: 0;
+    display: none;
+    border-radius: 5px;
+    border: 5px transparent;
+}
+
+.submenu2 {
+    position: absolute;
+    left: 100%;
+    width: 170px;
+    top: 0;
+    background-color: #c0bfbf;
+    display: none;
+    border-radius: 5px;
+    
+}
+
+.menu li:hover > .submenu {
+    display: block;
+    animation: slideup .3s ease;
+}
+
+.menu li:hover > .submenu2 {
+    display: block;
+    animation: slideleft .3s ease;
+}
+
+@keyframes slideup {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(18px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.btn {
+    position: absolute;
+}
+
+.btn a {
+    padding: 4px 20px;
+    margin: 0, 0, 10px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    overflow: hidden; /* skryje čiary, ktoré vychádzajú z rámika*/
+    transition: 0.1s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0003);
+}
+
+.btn a:nth-child(1) {
+    filter: hue-rotate(115deg);
+}
+.btn a:nth-child(3) {
+    filter: hue-rotate(270deg);
+}
+
+.btn a:hover {
+    background: #949494;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 50px #000000;
+    transition-delay: 0.4s;
+    border: none;
+}
+
+.btn a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #000000;
+    border-left: 2px solid #000000;
+    transition: 0.4s;
+    transition-delay: 0.2s;
+}
+
+.btn a:hover:before {
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+
+.btn a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    transition: 0.4s;
+    transition-delay: 0.2s;
+}
+
+.btn a:hover:after {
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+
+.btn a:last-child{
+    border: none;
+}
+
+/* pre mobily */
+
+
+
+
+
+/* tu začína hlavná časť stránky */
+
+
+.about {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: rgb(231, 229, 229);
+}
+
+.about img {
+    height: auto;
+    width: 340px;
+}
+
+.about-text {
+    width: 550px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h2 {
+    color: rgb(0, 0, 0);
+    font-size:60px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+    font-size: 35px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.about-text p {
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: start;
+}
+
+.kniha {
+    text-align: center;
+}
+.button {
+    background-color: #949494;
+    color: rgb(0, 0, 0);
+    font-family: Garamond;
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 5px;
+    transition: .4s;   
+    display: flexbox;
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+
+/* tu sa začína 2 časť hlavnej stranky */
+
+.druhe {
+    width: 100%;
+    padding: 100px 0;
+    background-color: rgb(231, 229, 229);
+    }
+
+.druhe img {
+    width: 580px;
+    height: auto;
+    }
+
+
+.heading {
+    text-align: center;
+    color: #000000;
+    background-color: #535353;
+    text-transform: uppercase;
+    
+    font-size: 40px;
+}
+
+.content {
+    width: 750px;
+    padding-top: 25px;
+    padding-left: 250px;
+}
+
+.content h3 {
+    color: #000000;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.content h4 {
+    font-family: Monotype Corsiva;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.content p {
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 50px;
+    text-align: start;
+    margin-right: -250px;
+}
+
+/* toto je časť s logami vydavateľstiev*/
+
+.container {
+    width: 100%;
+    height: 40vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper {
+    width: 80%;
+    height: fit-content;
+}
+
+.swiper-wrapper .swiper-slide {
+    padding-left: 350px;
+}
+
+.swiper-slide img {
+    width: 500px;
+    align-items: center;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+    color: rgb(0, 0, 0);
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: rgb(0, 0, 0);
+}
+
+/* toto je časť, kde je footer */
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #c0bfbf;
+    height: auto;
+    width: 99vw;
+    font-family: Garamond;
+    padding-top: 40px;
+    color:rgb(0, 0, 0);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 5px auto;
+    line-height: 28px;
+    font-size: 40px;
+    font-family: Charm;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 20px 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.socials a i {
+    font-size: 2.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: rgb(171, 171, 192);
+}
+
+.socials img {
+    width: 90px;
+}
+
+.footer-bottom {
+    background: #c0bfbf;
+    width: 99vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/* toto je časť, aby fungoval web aj na mobiloch */
